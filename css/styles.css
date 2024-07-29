@@ -1,0 +1,198 @@
+/* Custom css file made by JeanDoe */
+
+@charset 'utf-8';
+
+/* Import items */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+/* declaration of root variables */
+
+:root{
+    /* fonts */
+    --body-font: 'Poppins', Arial, sans-serif;
+
+    /* colors */
+    --white: #fff;
+    --black: #000;
+    --black-clr: #567;
+    --white-bg: #faf9f9;
+    --light-bg: #d1e1f1;
+    --light-clr: #888;
+}
+
+/* Initialisations of tags */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    font-family: var(--body-font);
+}
+
+
+/* bases */
+
+html{
+    font-size: 90%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 0.938rem;
+    font-weight: normal;
+    background: var(--white-bg);
+    padding: 0.5rem;
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+}
+
+/* resusables classes */
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* cards section starts */
+
+.cards{
+    background: var(--white);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 18rem);
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    max-width: 75rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cards .box{
+    background: var(--white-bg);
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    transition: all .3s;
+}
+
+.cards .box:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.cards img{
+    max-height: 10rem;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: .25rem;
+}
+
+.cards .btn{
+    text-transform: capitalize;
+    border-radius: 2.5rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.cards .box:nth-of-type(1) .btn{
+    background: #f7dff5;
+    color: #b22485;
+}
+
+.cards .box:nth-of-type(2) .btn{
+    background: #d1e8ff;
+    color: #2968a8;
+}
+
+.cards .box:nth-of-type(3) .btn{
+    background: #d6f8d6;
+    color: #205c20;
+}
+
+.cards p{
+    font-size: 0.938rem;
+    font-weight: 300;
+    margin: .5rem 0;
+}
+
+.cards .icon{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* subscribes section starts */
+
+.subscribes{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--white);
+    min-height: 15vh;
+    display: grid;
+    place-content: center;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px 100vw;
+    display: none;
+}
+
+.subscribes.active{
+    display: block;
+}
+
+.subscribes .cancel{
+    font-size: 1.5rem;
+    color: var(--black-clr);
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    cursor: pointer;
+}
+
+.subscribes p{
+    font-size: 0.938rem;
+    color: var(--light-clr);
+    max-width: 26rem;
+    width: 100%;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.subscribes form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscribes input{
+    width: 100%;
+    padding: .5rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.subscribes button{
+    padding: .5rem 1rem;
+    font-size: 1.6rem;
+    color: var(--black-clr);
+    cursor: pointer;
+}
+
+
+@media  (max-width: 900px) {
+    .cards{
+        max-width: 100%;
+        width: auto;
+        margin: 0 auto;
+    }
+}
